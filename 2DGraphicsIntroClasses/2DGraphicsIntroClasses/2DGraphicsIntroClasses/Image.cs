@@ -4,7 +4,7 @@ using System.IO;
 class Image
 {
     /// <summary>
-    /// the actual bit array of the image
+    /// the bit array that sometimes acts as a proxy to the image. Used to get and set specific points on the image and manipulate it.
     /// </summary>
 	internal byte [] buffer;
 
@@ -19,7 +19,7 @@ class Image
 	public int Height { get; }
 
     /// <summary>
-    /// Discribes whether image is grayscale, BGR, or BGRA
+    /// Discribes whether image is grayscale, BGR, or BGRA. Int assigned to each one is used to find the bits per pixel in calculations
     /// </summary>
 	public Format Format { get; }
 
@@ -48,7 +48,7 @@ class Image
 	}
 
     /// <summary>
-    /// Flips the image along the horizontal axis using the buffer array as a middleman
+    /// Flips the image along the horizontal axis using the buffer array to manipulate certain points.
     /// </summary>
 	public void VerticalFlip ()
 	{
@@ -78,11 +78,11 @@ class Image
 	}
 
     /// <summary>
-    /// Get color of a coordinate on the image
+    /// Get color of a pixel on the image using the x and y coordinates of the image.
     /// </summary>
     /// <param name="x">X coordinate of image. Can't be smaller than the width or 0</param>
     /// <param name="y">Y coordinate of the image. Can't be smaller than the height or 0</param>
-    /// <returns></returns>
+    /// <returns>The color of the pixel at the coordinate</returns>
 	public Color this [int x, int y] {
 		get {
 			if (x < 0 || x >= Width) throw new ArgumentException ("x");
