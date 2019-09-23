@@ -1,0 +1,15 @@
+C:\workspace\2DGraphicsIntroClasses\2DGraphicsIntroClasses\bin\Debug\2DGraphicsIntroClasses.exe.config
+C:\workspace\2DGraphicsIntroClasses\2DGraphicsIntroClasses\bin\Debug\2DGraphicsIntroClasses.exe
+C:\workspace\2DGraphicsIntroClasses\2DGraphicsIntroClasses\bin\Debug\2DGraphicsIntroClasses.pdb
+C:\workspace\2DGraphicsIntroClasses\2DGraphicsIntroClasses\obj\Debug\GraphicsIntroWithVecsAndMatrices.csprojAssemblyReference.cache
+C:\workspace\2DGraphicsIntroClasses\2DGraphicsIntroClasses\obj\Debug\MainWindow.g.cs
+C:\workspace\2DGraphicsIntroClasses\2DGraphicsIntroClasses\obj\Debug\App.g.cs
+C:\workspace\2DGraphicsIntroClasses\2DGraphicsIntroClasses\obj\Debug\2DGraphicsIntroClasses_MarkupCompile.cache
+C:\workspace\2DGraphicsIntroClasses\2DGraphicsIntroClasses\obj\Debug\2DGraphicsIntroClasses_MarkupCompile.lref
+C:\workspace\2DGraphicsIntroClasses\2DGraphicsIntroClasses\obj\Debug\MainWindow.baml
+C:\workspace\2DGraphicsIntroClasses\2DGraphicsIntroClasses\obj\Debug\2DGraphicsIntroClasses.g.resources
+C:\workspace\2DGraphicsIntroClasses\2DGraphicsIntroClasses\obj\Debug\_2DGraphicsIntroClasses.Properties.Resources.resources
+C:\workspace\2DGraphicsIntroClasses\2DGraphicsIntroClasses\obj\Debug\GraphicsIntroWithVecsAndMatrices.csproj.GenerateResource.cache
+C:\workspace\2DGraphicsIntroClasses\2DGraphicsIntroClasses\obj\Debug\GraphicsIntroWithVecsAndMatrices.csproj.CoreCompileInputs.cache
+C:\workspace\2DGraphicsIntroClasses\2DGraphicsIntroClasses\obj\Debug\2DGraphicsIntroClasses.exe
+C:\workspace\2DGraphicsIntroClasses\2DGraphicsIntroClasses\obj\Debug\2DGraphicsIntroClasses.pdb
