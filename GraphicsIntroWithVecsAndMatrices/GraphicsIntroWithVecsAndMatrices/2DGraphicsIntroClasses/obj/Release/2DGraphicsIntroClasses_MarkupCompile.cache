@@ -4,11 +4,11 @@
 winexe
 C#
 .cs
-C:\Users\Mike\Source\Repos\DefinitelyNotAShark\GraphicsAppRepo\GraphicsIntroWithVecsAndMatrices\GraphicsIntroWithVecsAndMatrices\2DGraphicsIntroClasses\obj\Debug\
+C:\Users\Mike\Source\Repos\DefinitelyNotAShark\GraphicsAppRepo\GraphicsIntroWithVecsAndMatrices\GraphicsIntroWithVecsAndMatrices\2DGraphicsIntroClasses\obj\Release\
 _2DGraphicsIntroClasses
 none
 false
-DEBUG;TRACE
+TRACE
 C:\Users\Mike\Source\Repos\DefinitelyNotAShark\GraphicsAppRepo\GraphicsIntroWithVecsAndMatrices\GraphicsIntroWithVecsAndMatrices\2DGraphicsIntroClasses\App.xaml
 11151548125
 
