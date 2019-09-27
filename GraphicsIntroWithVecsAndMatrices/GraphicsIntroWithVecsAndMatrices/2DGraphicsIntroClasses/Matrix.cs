@@ -90,7 +90,7 @@ public struct Matrix3
     /// </summary>
     /// <param name="row">x value of matrix</param>
     /// <param name="column">y value of matrix</param>
-    /// <returns></returns>
+    /// <returns>value of the cordinate</returns>
     public float this[int row, int column]
     {
         get
@@ -207,7 +207,7 @@ public struct Matrix3
     /// <summary>
     /// prints the matrix as a string, creating a new line for every row.
     /// </summary>
-    /// <returns></returns>
+    /// <returns>The matrix converted to string</returns>
     public override string ToString()
     {
         var sb = new System.Text.StringBuilder();
@@ -342,7 +342,7 @@ public struct Matrix4
     /// <summary>
     /// flips the matrix
     /// </summary>
-    /// <returns></returns>
+    /// <returns>The matrix4 flipped</returns>
     public Matrix4 Transpose()
     {
         return new Matrix4
@@ -369,21 +369,27 @@ public struct Matrix4
     /// <summary>
     /// sets all diagonal values (where x == y) to 1.
     /// </summary>
-    /// <returns></returns>
+    /// <returns>The matrix4 reset</returns>
     public static Matrix4 Identity()
     {
         return new Matrix4 { R0C0 = 1, R1C1 = 1, R2C2 = 1, R3C3 = 1 };
     }
-    // sets diagonal values (where x == y) to float "scale".
+
+    /// <summary>
+    /// sets diagonal values (where x == y) to float "scale".
+    /// </summary>
+    /// <param name="scale">The float to set the values to</param>
+    /// <returns>A matrix4 set to scale</returns>
     public static Matrix4 Zoom(float scale)
     {
         return new Matrix4 { R0C0 = scale, R1C1 = scale, R2C2 = scale, R3C3 = scale };
     }
+
     /// <summary>
-    /// 
+    /// Gets the rotation along  the z axis at a certain angle
     /// </summary>
-    /// <param name="angle"></param>
-    /// <returns></returns>
+    /// <param name="angle">The angle at which to get the rotation</param>
+    /// <returns>Rotation as matrix4</returns>
     public static Matrix4 RotationZ(float angle)
     {
         var cosangle = (float)Math.Cos(angle);
@@ -397,7 +403,12 @@ public struct Matrix4
         return R;
     }
 
-
+    /// <summary>
+    /// Multiplies 2 matrices together and returns the value as one maxtrix4
+    /// </summary>
+    /// <param name="l">The left matrix</param>
+    /// <param name="r">The right matrix</param>
+    /// <returns>Result of the multiplication as a matrix4</returns>
     public static Matrix4 operator *(Matrix4 l, Matrix4 r)
     {
         var result = new Matrix4();
@@ -415,6 +426,10 @@ public struct Matrix4
         return result;
     }
 
+    /// <summary>
+    /// Gives each matrix new values to index
+    /// </summary>
+    /// <returns>The string created from the legth of the matrix</returns>
     public override string ToString()
     {
         var sb = new System.Text.StringBuilder();
@@ -562,6 +577,11 @@ static class MatrixHelpers
         return minor;
     }
 
+    /// <summary>
+    /// Finds the determinant of a matrix3
+    /// </summary>
+    /// <param name="m">The matrix3 to use</param>
+    /// <returns>The determinant of the matrix as float</returns>
     static float Det(Matrix3 m)
     {
         float det = 0;
@@ -571,11 +591,22 @@ static class MatrixHelpers
         return det;
     }
 
+    /// <summary>
+    /// Finds the determinant of a matrix2
+    /// </summary>
+    /// <param name="m">The matrix2 to use</param>
+    /// <returns>The determinant of the matrix as float</returns>
     static float Det(Matrix2 m)
     {
         return m[0, 0] * m[1, 1] - m[0, 1] * m[1, 0];
     }
 
+    /// <summary>
+    /// Multiplies a vector3 with a matrix3 and returns the result as a vector3
+    /// </summary>
+    /// <param name="m">The matrix to multiply</param>
+    /// <param name="v">The vector to multiply</param>
+    /// <returns>The result of the multiplication as vector3</returns>
     public static Vec3f Mult(Matrix3 m, Vec3f v)
     {
         return new Vec3f
@@ -586,6 +617,12 @@ static class MatrixHelpers
         };
     }
 
+    /// <summary>
+    /// Multiplies a vector with a matrix
+    /// </summary>
+    /// <param name="m">Matrix to multiply</param>
+    /// <param name="v">Vector to multiply</param>
+    /// <returns>The multiplied value as a vector4</returns>
     public static Vec4f Mult(Matrix4 m, Vec4f v)
     {
         return new Vec4f
