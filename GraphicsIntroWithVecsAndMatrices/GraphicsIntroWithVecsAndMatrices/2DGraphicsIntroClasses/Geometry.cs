@@ -350,7 +350,12 @@ struct Vec3i
 
 static class Geometry
 {
-   
+   /// <summary>
+   ///Returns a vector that crosses the left and right vectors
+   /// </summary>
+   /// <param name="l">The left vector </param>
+   /// <param name="r">The right vector</param>
+   /// <returns>The crossed vector</returns>
 	public static Vec3f Cross (Vec3f l, Vec3f r)
 	{
 		return new Vec3f {
@@ -359,27 +364,55 @@ static class Geometry
 			z = l.x * r.y - l.y * r.x
 		};
 	}
+
+    /// <summary>
+    /// Gets a point in both vectors that is in the middle
+    /// </summary>
+    /// <param name="l">The left vector</param>
+    /// <param name="r">The right vector</param>
+    /// <returns>The middle point of the 2 vectors as float</returns>
 	public static float Dot (Vec3f l, Vec3f r)
 	{
 		return l.x * r.x + l.y * r.y + l.z * r.z;
 	}
 
+    /// <summary>
+    /// Converts a vector3 into a vector4
+    /// </summary>
+    /// <param name="v">The vector to convert</param>
+    /// <param name="fill">The amount to put as the new component of the vector (always is 1)</param>
+    /// <returns>The converted vector4</returns>
 	public static Vec4f Embed4D (Vec3f v, float fill = 1)
 	{
 		return new Vec4f { x = v.x, y = v.y, z = v.z, h = fill };
 	}
 
+    /// <summary>
+    /// Converts a vector3 into a vector2
+    /// </summary>
+    /// <param name="v">The vector to convert</param>
+    /// <returns>The new vector 2 converted</returns>
 	public static Vec2f Project2D (Vec3f v)
 	{
 		return new Vec2f { x = v.x, y = v.y };
 	}
 
-	public static Vec2f Project2D (Vec4f v)
+    /// <summary>
+    /// Converts a vector4 into a vector2
+    /// </summary>
+    /// <param name="v">The vector to convert</param>
+    /// <returns>The new vector 4 converted</returns>
+    public static Vec2f Project2D (Vec4f v)
 	{
 		return new Vec2f { x = v.x, y = v.y };
 	}
 
-	public static Vec3f Project3D (Vec4f v)
+    /// <summary>
+    /// Converts a vector4 into a vector3
+    /// </summary>
+    /// <param name="v">The vector to convert</param>
+    /// <returns>The new vector 3 converted</returns>
+    public static Vec3f Project3D (Vec4f v)
 	{
 		return new Vec3f { x = v.x, y = v.y, z = v.z };
 	}
